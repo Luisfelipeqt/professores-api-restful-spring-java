@@ -1,6 +1,9 @@
 package br.com.projectprofessors.ProjectProfessors.core.entities;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -13,8 +16,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Table(name = "professores")
 @ToString(onlyExplicitlyIncluded = true)
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Professor implements Serializable {
+@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
+public class Professor extends Auditable implements Serializable {
     private static final long serialVersionID = 1L;
 
     @Id
@@ -44,10 +47,4 @@ public class Professor implements Serializable {
 
     @Column(name = "password")
     private String password;
-
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
-
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
 }

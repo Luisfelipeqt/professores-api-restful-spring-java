@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    username: root
+    password: 99620530
+    url: jdbc:mysql://localhost:3306/hyperprof?useSSL=false&serverTimezone=UTC
+  jpa:
+    show-sql: true
+    properties:
+      "[format_sql]": true

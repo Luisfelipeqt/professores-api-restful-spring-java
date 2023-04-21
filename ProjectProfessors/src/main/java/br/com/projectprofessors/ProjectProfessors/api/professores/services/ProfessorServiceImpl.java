@@ -2,6 +2,7 @@ package br.com.projectprofessors.ProjectProfessors.api.professores.services;
 
 import br.com.projectprofessors.ProjectProfessors.api.professores.dtos.ProfessorResponse;
 import br.com.projectprofessors.ProjectProfessors.api.professores.mappers.ProfessorMapper;
+import br.com.projectprofessors.ProjectProfessors.core.exceptions.ModelNotFoundException;
 import br.com.projectprofessors.ProjectProfessors.core.repositories.ProfessorRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -22,5 +23,12 @@ public class ProfessorServiceImpl implements ProfessorService{
                 .stream()
                 .map(professorMapper::toProfessorResponse)
                 .toList();
+    }
+
+    @Override
+    public ProfessorResponse buscarProfessorPorId(Long professorId) {
+        return professorRepository.findById(professorId)
+                .map(professorMapper::toProfessorResponse)
+                .orElseThrow(() -> new ModelNotFoundException("Professor não encontrado"));
     }
 }

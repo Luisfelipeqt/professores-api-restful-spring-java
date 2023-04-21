@@ -1,4 +1,4 @@
-package br.com.projectprofessors.ProjectProfessors.api.professores.services;
+package br.com.projectprofessors.ProjectProfessors.api.services;
 
 import br.com.projectprofessors.ProjectProfessors.api.professores.dtos.ProfessorResponse;
 import br.com.projectprofessors.ProjectProfessors.api.professores.mappers.ProfessorMapper;

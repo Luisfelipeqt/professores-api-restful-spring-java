@@ -1,4 +1,4 @@
-package br.com.projectprofessors.ProjectProfessors.api.professores.common.routes.handlers;
+package br.com.projectprofessors.ProjectProfessors.api.professores.routes.handlers;
 
 import br.com.projectprofessors.ProjectProfessors.api.professores.dtos.ErrorResponse;
 import br.com.projectprofessors.ProjectProfessors.core.exceptions.ModelNotFoundException;

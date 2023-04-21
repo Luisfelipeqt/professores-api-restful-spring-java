@@ -1,8 +1,8 @@
 package br.com.projectprofessors.ProjectProfessors.api.professores.controllers;
 
-import br.com.projectprofessors.ProjectProfessors.api.professores.common.routes.ApiRoutes;
+import br.com.projectprofessors.ProjectProfessors.api.professores.routes.ApiRoutes;
 import br.com.projectprofessors.ProjectProfessors.api.professores.dtos.ProfessorResponse;
-import br.com.projectprofessors.ProjectProfessors.api.professores.services.ProfessorService;
+import br.com.projectprofessors.ProjectProfessors.api.services.ProfessorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

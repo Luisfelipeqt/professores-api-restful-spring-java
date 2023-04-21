@@ -1,4 +1,4 @@
-package br.com.projectprofessors.ProjectProfessors.api.professores.common.routes;
+package br.com.projectprofessors.ProjectProfessors.api.professores.routes;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
